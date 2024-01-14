@@ -1,37 +1,21 @@
-// const header = React.createElement("h1",{id: "heading"}, "Hello from React sript!");
-// const root = ReactDOM.createRoot(document.getElementById("root"));
+import React from "react";
+import ReactDOM from "react-dom";
 
-// console.log(header)
+//Make functional Compenents in React
+// Functional Compenents are basically returning an JSX or React Elements.
+const HeaderComponent1 = () => {
+  return <h1 className="h1Header">Returning JSX from compondsfdsents</h1>;
+};
 
-// root.render(header)
-
-
-{/* <div id="grandparent ">
-        <div id = "parent">
-            <div id = "child">   
-            <h1></h1>
-            <p></p>
-        </div>
+const HeaderComponent = () => {
+  return (
+    <div>
+      <HeaderComponent1 />
+      <h1 className="h1Header">Returning JSX from components</h1>
     </div>
-</div> */}
+  );
+};
 
-const grandparent = React.createElement(
-    "div",
-    {id : "grandparent"},
-    React.createElement(
-        "div",
-        {id: "parent"},
-            React.createElement(
-                "div",
-                {id:"child"},
-                [
-                    React.createElement("H1",{id:"h1"},"i'm h1 tag"),
-                    React.createElement("p",{id:"p"},"i m df tag")
-                ]
-            )
-        )
-);
-console.log(grandparent);
-
+console.log(HeaderComponent);
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(grandparent);
+root.render(<HeaderComponent />);
