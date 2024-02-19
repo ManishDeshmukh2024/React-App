@@ -59,11 +59,19 @@
     margin: 10px;
     font-size : 30;
 }
-.filter{
+.btn-filter{
+    margin : 20px; 
     cursor: pointer;
-
+    height : 10px;
     padding: 10px;
+    align-content: center;
+    flex-wrap : wrap;
 }
+
+.btn-search{
+    padding: 0;
+}
+
 .shimmer-container{
     display : flex;
     flex-wrap: wrap ;
@@ -77,4 +85,7 @@
 .login-btn{
     margin: 20px
 
+}
+.txt-search{
+    margin : 20px
 }
