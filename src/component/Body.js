@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 
+import useOnlineStatus from "../../utils/useOnlineStatus";
+
 const Body = () => {
   const [listOfRestaurant, setListOfRestaurant] = useState([]);
   const [searchText, setSearchText] = useState("");
@@ -35,6 +37,11 @@ const Body = () => {
     console.log("1st Render with Empty Data");
     return <Shimmer />;
   }
+  //console.log("useOnlineStatus", useOnlineStatus());
+
+  //const onlineStatus = useOnlineStatus;
+
+  if (useOnlineStatus === false) return <h1>You are offline.</h1>;
 
   return (
     <div className="body">
@@ -71,7 +78,7 @@ const Body = () => {
       </div>
       <div className="restaurant-container">
         {filteredListOfRestaurant.map((restaurent) => (
-            <RestaurantCard key={restaurent.info.id} restroData={restaurent} />
+          <RestaurantCard key={restaurent.info.id} restroData={restaurent} />
         ))}
       </div>
     </div>

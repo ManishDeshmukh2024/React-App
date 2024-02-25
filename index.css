@@ -1,3 +1,4 @@
+
 .header {
     display: flex;
     border : 1px solid black;
@@ -88,4 +89,8 @@
 }
 .txt-search{
     margin : 20px
+}
+.user-func{
+    border: 1px solid black;
+    padding :20px;
 }
